@@ -45,5 +45,10 @@ contract TokenBank {
 
 
 
-
+    constructor (string memory name_, string memory symbol_) {
+        _name = name_;
+        _symbol = symbol_;
+        owner = msg.sender;
+        _balances[owner]= _totalSupply;
+    }
 }
